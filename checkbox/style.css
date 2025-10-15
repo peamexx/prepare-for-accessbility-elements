@@ -23,7 +23,7 @@
   overflow: hidden;
 }
 .a11y-checkboxs .checkboxs-wrapper.hide-input [type=checkbox]:checked ~ label::before {
-  background-image: url("/images/checkmark-circle-outline.svg");
+  background-image: url("../images/checkmark-circle-outline.svg");
 }
 .a11y-checkboxs .checkboxs-wrapper.hide-input label {
   display: flex;
@@ -34,7 +34,7 @@
   display: block;
   width: 20px;
   height: 20px;
-  background-image: url("/images/ellipse-outline.svg");
+  background-image: url("../images/ellipse-outline.svg");
 }
 .a11y-checkboxs .checkboxs-wrapper label {
   word-break: keep-all;
@@ -46,6 +46,7 @@
 .a11y-checkboxs .checkboxs-wrapper [type=checkbox]:focus, .a11y-checkboxs .checkboxs-wrapper [type=checkbox]:focus-visible, .a11y-checkboxs .checkboxs-wrapper [type=checkbox]:hover {
   outline: none !important;
   border: none !important;
+  outline-offset: 2px;
 }
 .a11y-checkboxs .checkboxs-wrapper [type=checkbox]:hover {
   cursor: pointer;

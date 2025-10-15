@@ -26,7 +26,7 @@
 
         &:checked~label {
           &::before {
-            background-image: url('/images/checkmark-circle-outline.svg');
+            background-image: url('../images/checkmark-circle-outline.svg');
           }
         }
       }
@@ -40,7 +40,7 @@
           display: block;
           width: 20px;
           height: 20px;
-          background-image: url('/images/ellipse-outline.svg');
+          background-image: url('../images/ellipse-outline.svg');
         }
       }
     }
@@ -58,6 +58,7 @@
       &:hover {
         outline: none !important;
         border: none !important;
+        outline-offset: 2px;
       }
 
       &:hover {
