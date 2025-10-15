@@ -18,8 +18,10 @@ body {
 
     .a11y-checkboxs {
       .checkboxs-wrapper {
-        [type="checkbox"] {
-          border: initial;
+        &.hide-input {
+          [type="checkbox"] {
+            border: initial;
+          }
         }
       }
     }
