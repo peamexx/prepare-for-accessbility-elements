@@ -1,3 +1,15 @@
+body {
+  [data-mobile="ios"] {
+    .a11y-checkboxs {
+      .checkboxs-wrapper {
+        &:focus-within::before {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
 .a11y-checkboxs {
   padding: 20px;
 

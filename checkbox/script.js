@@ -43,6 +43,16 @@ class DetectMobile {
   get mode() {
     return `isAndroid: ${this.isAndroid}, isIOS: ${this.isIOS}`;
   }
+
+  get string() {
+    if (this.isAndroid) {
+      return 'aos'
+    }
+    if (this.isIOS) {
+      return 'ios'
+    }
+    return 'false';
+  }
 }
 
 window.addEventListener('load', () => {
@@ -51,6 +61,8 @@ window.addEventListener('load', () => {
   const span = document.createElement('span');
   span.textContent = dd.agent + ' 😀 ' + dd.mode;
   document.body.append(span);
+
+  document.body.setAttribute('data-mobile', dd.string);
 })
 
 document.querySelectorAll('.a11y-checkboxs [type="checkbox"]').forEach((el) => {
