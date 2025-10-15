@@ -36,8 +36,10 @@ body {
     &.hide-input {
       [type="checkbox"] {
         position: absolute;
-        width: 1px;
-        height: 1px;
+        // width: 1px;
+        // height: 1px;
+        width: 100%;
+        height: 100%;
         clip: rect(1px, 1px, 1px, 1px);
         clip-path: inset(50%);
         border: 0;
@@ -59,6 +61,7 @@ body {
           display: block;
           width: 20px;
           height: 20px;
+          background-color: #fff;
           background-image: url('../images/ellipse-outline.svg');
         }
       }
