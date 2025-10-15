@@ -1,20 +1,21 @@
 class A11yCheckbox {
-  ARIA_TAG_STR = 'aria-checked';
+  ARIA_CHECKED_STR = 'aria-checked';
 
   constructor(el) {
     this.el = el;
 
-    if (!el.getAttribute(this.ARIA_TAG_STR)) {
-      this.el.setAttribute(this.ARIA_TAG_STR, 'false');
+    if (!el.getAttribute(this.ARIA_CHECKED_STR)) {
+      this.el.setAttribute(this.ARIA_CHECKED_STR, 'false');
     }
 
+    this.el.addEventListener('click', this.click.bind(this));
     this.el.addEventListener('keydown', this.keyDown.bind(this));
     this.el.addEventListener('keyup', this.keyUp.bind(this));
   }
 
   toggle() {
-    const isChecked = this.el.getAttribute(this.ARIA_TAG_STR) === 'true';
-    this.el.setAttribute(this.ARIA_TAG_STR, String(!isChecked));
+    const isChecked = this.el.getAttribute(this.ARIA_CHECKED_STR) === 'true';
+    this.el.setAttribute(this.ARIA_CHECKED_STR, String(!isChecked));
     this.el.checked = !isChecked;
   }
 
