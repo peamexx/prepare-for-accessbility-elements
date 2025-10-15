@@ -1,3 +1,14 @@
+body[data-mobile=ios] {
+  background-color: rgb(214, 255, 253);
+}
+body[data-mobile=ios] .a11y-checkboxs .checkboxs-wrapper:focus-within::before {
+  display: none;
+}
+
+body[data-mobile=aos] {
+  background-color: rgb(255, 214, 234);
+}
+
 .a11y-checkboxs {
   padding: 20px;
 }
@@ -9,7 +20,7 @@
   content: "";
   position: absolute;
   inset: -2px;
-  outline: 2px dotted black !important;
+  outline: 2px dotted black;
   outline-offset: 2px;
   pointer-events: none;
 }

@@ -1,5 +1,6 @@
 body {
-  [data-mobile="ios"] {
+  &[data-mobile="ios"] {
+    background-color: rgba(214, 255, 253, 1);
     .a11y-checkboxs {
       .checkboxs-wrapper {
         &:focus-within::before {
@@ -7,6 +8,12 @@ body {
         }
       }
     }
+  }
+}
+
+body {
+  &[data-mobile="aos"] {
+    background-color: rgb(255, 214, 234);
   }
 }
 
