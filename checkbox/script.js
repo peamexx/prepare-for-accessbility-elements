@@ -27,8 +27,6 @@ class DetectMobile {
     this.isAndroid = false;
     this.isIOS = false;
 
-    alert(navigator.userAgent)
-
     if (/android/i.test(navigator.userAgent)) {
       this.isAndroid = true;
       this.isIOS = false;
@@ -38,8 +36,12 @@ class DetectMobile {
     }
   }
 
+  get agent() {
+    return navigator.userAgent;
+  }
+
   get mode() {
-    return this.isAndroid ? this.isAndroid : this.isIOS;
+    return `isAndroid: ${this.isAndroid}, isIOS: ${this.isIOS}`;
   }
 }
 
@@ -47,7 +49,7 @@ window.addEventListener('load', () => {
   const dd = new DetectMobile();
 
   const span = document.createElement('span');
-  span.textContent = 'mobile: ' + dd.mode;
+  span.textContent = dd.agent + ' 😀 ' + dd.mode;
   document.body.append(span);
 })
 
