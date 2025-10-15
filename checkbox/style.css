@@ -8,6 +8,9 @@ body[data-mobile=ios] .a11y-checkboxs .checkboxs-wrapper:focus-within::before {
 body[data-mobile=aos] {
   background-color: rgb(255, 214, 234);
 }
+body[data-mobile=aos] .a11y-checkboxs .checkboxs-wrapper [type=checkbox] {
+  border: initial;
+}
 
 .a11y-checkboxs {
   padding: 20px;
@@ -30,7 +33,7 @@ body[data-mobile=aos] {
   height: 1px;
   clip: rect(1px, 1px, 1px, 1px);
   clip-path: inset(50%);
-  border: 3px solid red;
+  border: 0;
   overflow: hidden;
 }
 .a11y-checkboxs .checkboxs-wrapper.hide-input [type=checkbox]:checked ~ label::before {
