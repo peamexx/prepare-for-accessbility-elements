@@ -9,26 +9,12 @@ class A11yCheckbox {
     }
 
     this.el.addEventListener('click', this.click.bind(this));
-    this.el.addEventListener('keydown', this.keyDown.bind(this));
-    this.el.addEventListener('keyup', this.keyUp.bind(this));
   }
 
   toggle() {
     const isChecked = this.el.getAttribute(this.ARIA_CHECKED_STR) === 'true';
     this.el.setAttribute(this.ARIA_CHECKED_STR, String(!isChecked));
     this.el.checked = !isChecked;
-  }
-
-  keyDown(event) {
-    if (event.key === ' ' || event.code.toLowerCase() === 'space') {
-      event.preventDefault();
-    }
-  }
-
-  keyUp(event) {
-    if (event.key === ' ' || event.code.toLowerCase() === 'space') {
-      this.toggle();
-    }
   }
 
   click() {
