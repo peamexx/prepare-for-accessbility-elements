@@ -6,78 +6,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="../reset.css">
-  <link rel="stylesheet" href="./checkbox.css">
+  <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
-  <h2>---원본</h2>
-  <h3 id="id-group-label">장수 목록</h3>
-  <div role="group" aria-labelledby="id-group-label">
-    <ul class="a11y-checkboxs">
-      <li class="checkboxs-wrapper">
-        <div role="checkbox" aria-checked="false" tabindex="0">유비</div>
-      </li>
-      <li class="checkboxs-wrapper">
-        <div role="checkbox" aria-checked="true" tabindex="0">관우</div>
-      </li>
-      <li class="checkboxs-wrapper">
-        <div role="checkbox" aria-checked="false" tabindex="0">장비</div>
-      </li>
-    </ul>
-  </div>
-  <br />
-  <h2>---li 없앰</h2>
-  <h3 id="id-group-label2">장수 목록</h3>
-  <div role="group" aria-labelledby="id-group-label2">
-    <div class="a11y-checkboxs">
-      <div class="checkboxs-wrapper">
-        <div role="checkbox" aria-checked="false" tabindex="0">유비</div>
-      </div>
-      <div class="checkboxs-wrapper">
-        <div role="checkbox" aria-checked="true" tabindex="0">관우</div>
-      </div>
-      <div class="checkboxs-wrapper">
-        <div role="checkbox" aria-checked="false" tabindex="0">장비</div>
-      </div>
-    </div>
-  </div>
-  <br />
-  <h2>---개선</h2>
-  <h3 id="id-group-label3">장수 목록</h3>
-  <div role="group" aria-labelledby="id-group-label3">
-    <div class="a11y-checkboxs">
-      <div class="checkboxs-wrapper">
-        <span id="c1" aria-hidden="true">유비</span>
-        <div aria-labelledby="c1" role="checkbox" aria-checked="false" tabindex="0"></div>
-      </div>
-      <div class="checkboxs-wrapper">
-        <span id="c2" aria-hidden="true">관우</span>
-        <div aria-labelledby="c2" role="checkbox" aria-checked="false" tabindex="0"></div>
-      </div>
-      <div class="checkboxs-wrapper">
-        <span id="c3" aria-hidden="true">장비</span>
-        <div aria-labelledby="c3" role="checkbox" aria-checked="false" tabindex="0"></div>
-      </div>
-    </div>
-  </div>
-  <h2>---어떻게 읽나 보자1 (진짜 체크박스)</h2>
-  <label for="d1">유비</label>
-  <input type="checkbox" id="d1" name="장수">
-  <h2>---어떻게 읽나 보자2</h2>
   <div class="a11y-checkboxs">
-    <div class="checkboxs-wrapper">
-      <span id="e1">유비</span>
-      <div aria-labelledby="e1" role="checkbox" aria-checked="false" tabindex="0"></div>
-    </div>
-  </div>
-  <h2>다시해</h2>
-  <div class="a11y-checkboxs">
-    <div class="checkboxs-wrapper">
+    <div class="checkboxs-wrapper hide-input">
       <input type="checkbox" id="i1" aria-checked="false">
-      <label for="i1">결제일</label>
+      <label for="i1">택배 배송</label>
+    </div>
+    <div class="checkboxs-wrapper">
+      <input type="checkbox" id="i12" aria-checked="false">
+      <label for="i12">픽업</label>
     </div>
   </div>
-  <script src="./checkbox.js"></script>
+  <script src="./script.js"></script>
 </body>
 
 </html>

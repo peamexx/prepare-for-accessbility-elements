@@ -7,11 +7,7 @@ class A11yCheckbox {
     if (!el.getAttribute(this.ARIA_TAG_STR)) {
       this.el.setAttribute(this.ARIA_TAG_STR, 'false');
     }
-    if (!el.getAttribute('tabindex')) {
-      this.el.setAttribute('tabindex', '0');
-    }
 
-    this.el.addEventListener('click', this.click.bind(this));
     this.el.addEventListener('keydown', this.keyDown.bind(this));
     this.el.addEventListener('keyup', this.keyUp.bind(this));
   }
@@ -19,6 +15,7 @@ class A11yCheckbox {
   toggle() {
     const isChecked = this.el.getAttribute(this.ARIA_TAG_STR) === 'true';
     this.el.setAttribute(this.ARIA_TAG_STR, String(!isChecked));
+    this.el.checked = !isChecked;
   }
 
   keyDown(event) {
@@ -38,6 +35,6 @@ class A11yCheckbox {
   }
 }
 
-document.querySelectorAll('.a11y-checkboxs [role="checkbox"]').forEach((el) => {
+document.querySelectorAll('.a11y-checkboxs [type="checkbox"]').forEach((el) => {
   new A11yCheckbox(el);
 })

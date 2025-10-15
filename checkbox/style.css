@@ -1,0 +1,52 @@
+.a11y-checkboxs {
+  padding: 20px;
+}
+.a11y-checkboxs .checkboxs-wrapper {
+  position: relative;
+  display: inline-block;
+}
+.a11y-checkboxs .checkboxs-wrapper:focus-within::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  outline: 2px dotted black !important;
+  outline-offset: 2px;
+  pointer-events: none;
+}
+.a11y-checkboxs .checkboxs-wrapper.hide-input [type=checkbox] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  border: 0;
+  overflow: hidden;
+}
+.a11y-checkboxs .checkboxs-wrapper.hide-input [type=checkbox]:checked ~ label::before {
+  background-image: url("/images/checkmark-circle-outline.svg");
+}
+.a11y-checkboxs .checkboxs-wrapper.hide-input label {
+  display: flex;
+  align-items: center;
+}
+.a11y-checkboxs .checkboxs-wrapper.hide-input label::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-image: url("/images/ellipse-outline.svg");
+}
+.a11y-checkboxs .checkboxs-wrapper label {
+  word-break: keep-all;
+}
+.a11y-checkboxs .checkboxs-wrapper [type=checkbox] {
+  display: inline-block;
+  cursor: pointer;
+}
+.a11y-checkboxs .checkboxs-wrapper [type=checkbox]:focus, .a11y-checkboxs .checkboxs-wrapper [type=checkbox]:focus-visible, .a11y-checkboxs .checkboxs-wrapper [type=checkbox]:hover {
+  outline: none !important;
+  border: none !important;
+}
+.a11y-checkboxs .checkboxs-wrapper [type=checkbox]:hover {
+  cursor: pointer;
+}
